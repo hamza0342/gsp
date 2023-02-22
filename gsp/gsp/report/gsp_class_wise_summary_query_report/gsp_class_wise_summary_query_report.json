@@ -1,0 +1,83 @@
+{
+ "add_total_row": 1,
+ "columns": [
+  {
+   "fieldname": "class",
+   "fieldtype": "Data",
+   "label": "Class",
+   "width": 140
+  },
+  {
+   "fieldname": "total_student",
+   "fieldtype": "Int",
+   "label": "Total Student",
+   "width": 180
+  },
+  {
+   "fieldname": "eligible_student",
+   "fieldtype": "Int",
+   "label": "Eligible Student",
+   "width": 180
+  },
+  {
+   "fieldname": "ineligible_student",
+   "fieldtype": "Int",
+   "label": "Ineligible Student",
+   "width": 180
+  },
+  {
+   "fieldname": "total_amont",
+   "fieldtype": "Int",
+   "label": "Total Amount",
+   "width": 180
+  }
+ ],
+ "creation": "2022-06-16 13:44:19.652854",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "year",
+   "fieldtype": "Link",
+   "label": "Year",
+   "mandatory": 1,
+   "options": "Year",
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "label": "District",
+   "mandatory": 0,
+   "options": "District",
+   "wildcard_filter": 1
+  },
+  {
+   "fieldname": "school",
+   "fieldtype": "Link",
+   "label": "School",
+   "mandatory": 0,
+   "options": "School",
+   "wildcard_filter": 1
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "modified": "2022-06-17 15:06:19.077540",
+ "modified_by": "Administrator",
+ "module": "GSP",
+ "name": "GSP Class Wise Summary Query Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "\n\n",
+ "ref_doctype": "Girl Stipend Program",
+ "report_name": "GSP Class Wise Summary Query Report",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ]
+}

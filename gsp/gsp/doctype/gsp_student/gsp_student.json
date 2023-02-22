@@ -1,0 +1,444 @@
+{
+ "actions": [],
+ "autoname": "format:{school}-{gr_no}",
+ "creation": "2022-05-30 16:39:55.437684",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "student_id",
+  "section_break_2",
+  "school",
+  "posting_date",
+  "gsp_year",
+  "semis_code",
+  "school_name",
+  "gsp_division",
+  "division_id",
+  "location",
+  "taluka",
+  "taluka_id",
+  "gsp_district",
+  "district_id",
+  "gsp_taluka",
+  "gsp_uc",
+  "gsp_attendance",
+  "percentage",
+  "working_days_nov",
+  "working_days_oct",
+  "section_break_14",
+  "class_of_student",
+  "section",
+  "gr_no",
+  "student_name",
+  "date_of_birth",
+  "father_guardian_name",
+  "cnic_of_guardian",
+  "mob_no_guardian",
+  "relation",
+  "stipend_received",
+  "eligibility_criteria",
+  "attendance_section",
+  "working_days",
+  "no_of_days_school_attended_for_current_academic_year",
+  "october",
+  "november",
+  "gsp_student_attendance",
+  "total",
+  "stipend_transfer",
+  "section_break_33",
+  "front_guardian_cnic",
+  "back_guardian_cnic",
+  "section_break_38",
+  "gps_latitude",
+  "gps_longitude",
+  "gps_accuracy",
+  "student_unique_id",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "columns": 4,
+   "fieldname": "gr_no",
+   "fieldtype": "Data",
+   "label": "GR #",
+   "length": 10,
+   "reqd": 1
+  },
+  {
+   "columns": 4,
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth",
+   "reqd": 1
+  },
+  {
+   "columns": 4,
+   "fieldname": "relation",
+   "fieldtype": "Select",
+   "label": "Relation",
+   "options": "\nFather\nGuardian"
+  },
+  {
+   "columns": 4,
+   "fieldname": "mob_no_guardian",
+   "fieldtype": "Data",
+   "label": "Mobile No. of Father/ Guardian",
+   "length": 13
+  },
+  {
+   "columns": 4,
+   "fieldname": "section",
+   "fieldtype": "Data",
+   "label": "Section",
+   "length": 3
+  },
+  {
+   "columns": 4,
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "label": "Student Name",
+   "reqd": 1
+  },
+  {
+   "columns": 4,
+   "fieldname": "father_guardian_name",
+   "fieldtype": "Data",
+   "label": "Father/ Guardian Name",
+   "reqd": 1
+  },
+  {
+   "columns": 4,
+   "fieldname": "october",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "October"
+  },
+  {
+   "columns": 4,
+   "fieldname": "november",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "November"
+  },
+  {
+   "columns": 4,
+   "fieldname": "total",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Total",
+   "read_only": 1
+  },
+  {
+   "columns": 4,
+   "fieldname": "cnic_of_guardian",
+   "fieldtype": "Data",
+   "label": "CNIC of Father/Guardian",
+   "reqd": 1
+  },
+  {
+   "columns": 4,
+   "fieldname": "school",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "GSP Form",
+   "options": "Girl Stipend Program",
+   "reqd": 1
+  },
+  {
+   "columns": 4,
+   "fetch_from": "school.semis_code",
+   "fetch_if_empty": 1,
+   "fieldname": "semis_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "SEMIS Code",
+   "options": "School",
+   "read_only": 1
+  },
+  {
+   "columns": 4,
+   "fetch_from": "school.year",
+   "fieldname": "gsp_year",
+   "fieldtype": "Data",
+   "label": "Year",
+   "read_only": 1
+  },
+  {
+   "columns": 6,
+   "fetch_from": "school.gsp_district",
+   "fieldname": "gsp_district",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "District",
+   "options": "District",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "school.total",
+   "fetch_if_empty": 1,
+   "fieldname": "gsp_attendance",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "GSP Attendance"
+  },
+  {
+   "fieldname": "percentage",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Percentage"
+  },
+  {
+   "fieldname": "stipend_received",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "label": "Stipend Amount",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "school.november",
+   "fetch_if_empty": 1,
+   "fieldname": "working_days_nov",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Working days of School in Nov"
+  },
+  {
+   "fetch_from": "school.october",
+   "fieldname": "working_days_oct",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Working days of School in Oct"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "eligibility_criteria",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Eligibility Criteria",
+   "options": "\nEligible\nNot Eligible",
+   "read_only": 1
+  },
+  {
+   "columns": 4,
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "columns": 8,
+   "fetch_from": "school.school_name",
+   "fetch_if_empty": 1,
+   "fieldname": "school_name",
+   "fieldtype": "Data",
+   "label": "School_Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "school.taluka",
+   "fieldname": "gsp_taluka",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "GSP Taluka",
+   "options": "Taluka"
+  },
+  {
+   "fetch_from": "school.u_c",
+   "fetch_if_empty": 1,
+   "fieldname": "gsp_uc",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "GSP UC",
+   "options": "Union Council"
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_33",
+   "fieldtype": "Section Break"
+  },
+  {
+   "columns": 6,
+   "fetch_from": "school.division",
+   "fieldname": "gsp_division",
+   "fieldtype": "Link",
+   "label": "Division",
+   "options": "Division",
+   "read_only": 1
+  },
+  {
+   "columns": 4,
+   "fieldname": "class_of_student",
+   "fieldtype": "Select",
+   "label": "Class",
+   "options": "\nClass VI\nClass IX\nClass X",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "GSP Student",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "columns": 12,
+   "fieldname": "no_of_days_school_attended_for_current_academic_year",
+   "fieldtype": "Heading",
+   "label": "No of days school attended for Current Academic Year"
+  },
+  {
+   "fieldname": "attendance_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "gsp_student_attendance",
+   "fieldtype": "Table",
+   "options": "GSP Monthly Attendance"
+  },
+  {
+   "fieldname": "stipend_transfer",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Stipend Transfer",
+   "options": "\nTransferred\nReceived\nNot Received"
+  },
+  {
+   "fetch_from": "school.taluka",
+   "fieldname": "taluka",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Taluka",
+   "options": "Taluka",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "school.location",
+   "fieldname": "location",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Location",
+   "options": "\nUrban\nRural",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "columns": 6,
+   "fieldname": "front_guardian_cnic",
+   "fieldtype": "Attach Image",
+   "label": "Attach Front side of  Father/Guardian CNIC"
+  },
+  {
+   "allow_on_submit": 1,
+   "columns": 6,
+   "fieldname": "back_guardian_cnic",
+   "fieldtype": "Attach Image",
+   "label": "Attach Back side of Father/Guardian CNIC"
+  },
+  {
+   "fieldname": "gps_latitude",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "GPS Latitude"
+  },
+  {
+   "fieldname": "gps_longitude",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "GPS Longitude"
+  },
+  {
+   "fieldname": "gps_accuracy",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "GPS Accuracy"
+  },
+  {
+   "fieldname": "section_break_38",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "4",
+   "fieldname": "division_id",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Division ID"
+  },
+  {
+   "fetch_from": "taluka.taluka_code",
+   "fieldname": "taluka_id",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Taluka ID"
+  },
+  {
+   "fetch_from": "gsp_district.district_code",
+   "fieldname": "district_id",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "District ID"
+  },
+  {
+   "columns": 4,
+   "fieldname": "student_id",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Student ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "student_unique_id",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "GR #",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "working_days",
+   "fieldtype": "Heading",
+   "label": "Working Days"
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "is_custom_form": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-08-25 13:19:33.723663",
+ "modified_by": "Administrator",
+ "module": "GSP",
+ "name": "GSP Student",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

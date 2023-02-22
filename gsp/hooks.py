@@ -9,6 +9,10 @@ app_license = "MIT"
 
 # Includes in <head>
 # ------------------
+app_include_css=[]
+web_include_css=[]
+app_include_js=[]
+web_include_js=[]
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/gsp/css/gsp.css"

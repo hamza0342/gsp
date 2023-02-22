@@ -1,0 +1,72 @@
+{
+ "_comments": "[]",
+ "_liked_by": "[]",
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-07-21 15:50:44.877376",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "gsp_month",
+  "attendance",
+  "release_stipend",
+  "girl_stipend_program",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "allow_on_submit": 1,
+   "columns": 3,
+   "fieldname": "attendance",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Working Days"
+  },
+  {
+   "columns": 3,
+   "default": "0",
+   "fieldname": "release_stipend",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Attendance Month"
+  },
+  {
+   "columns": 4,
+   "fieldname": "gsp_month",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Month",
+   "read_only": 1
+  },
+  {
+   "fieldname": "girl_stipend_program",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Girl Stipend Program",
+   "options": "Girl Stipend Program",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "GSP Monthly Attendance",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-08-28 16:53:15.247545",
+ "modified_by": "Administrator",
+ "module": "GSP",
+ "name": "GSP Monthly Attendance",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

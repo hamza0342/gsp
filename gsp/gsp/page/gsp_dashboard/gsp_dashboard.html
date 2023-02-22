@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+
+<body>
+	<section class="gsp-dashboard" id="gsp_dashboard">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-2">
+					<div class="card">
+						<div class="card-body p-2">
+							<div class="d-flex align-items-center">
+								<img src="/assets/semis_theme/img/school-white.png"
+									class="img-thumbnail object-cover ps-2 bg-primary" width="50" height="50" />
+								<div class="ms-2">
+									<h2 class="text-dark mb-0 mt-1 fs-6">{{totals.toLocaleString("en-US")}}</h2>
+									<p class="mb-0 fs-14 fw-500 text-left">Total <br />Schools</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-2">
+					<div class="card">
+						<div class="card-body p-2">
+							<div class="d-flex align-items-center">
+								<img src="/assets/semis_theme/img/gsp-eligible.png"
+									class="img-thumbnail object-cover ps-2 bg-success" width="50" height="50" />
+								<div class="ms-2">
+									<h2 class="text-dark mb-0 mt-1 fs-6">{{eligible_schls.toLocaleString("en-US")}}</h2>
+									<p class="mb-0 fs-14 fw-500 text-left">GSP <br />Eligible</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-2">
+					<div class="card">
+						<div class="card-body p-2">
+							<div class="d-flex align-items-center">
+								<img src="/assets/semis_theme/img/eligible-school.png"
+									class="img-thumbnail object-cover ps-2 bg-teal" width="50" height="50" />
+								<div class="ms-2">
+									<h2 class="text-dark mb-0 mt-1 fs-6" style="padding: 0.6rem;">
+										{{forms_created.toLocaleString("en-US")}} <span
+											class="fw-500 fs-14">({{forms_percentage}}%)</span></h2>
+									<p class="mb-0 fs-14 fw-500 text-left">GSP Forms</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-xs-2">
+					<div class="card">
+						<div class="card-body p-2">
+							<div class="d-flex align-items-center">
+								<img src="/assets/semis_theme/img/presentation.png"
+									class="img-thumbnail object-cover ps-2 bg-brown" width="50" height="50" />
+								<div class="ms-2">
+									<h2 class="text-dark mb-0 mt-1 fs-6">{{total_enrollment.toLocaleString("en-US")}}
+									</h2>
+									<p class="mb-0 fs-14 fw-500 text-left">Enrolled Students</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-xs-2">
+					<div class="card">
+						<div class="card-body p-2">
+							<div class="d-flex align-items-center">
+								<img src="/assets/semis_theme/img/enroll-student.png"
+									class="img-thumbnail object-cover ps-2 bg-dark-blue" width="55" height="55" />
+								<div class="ms-2">
+									<h2 class="text-dark mb-0 mt-1 fs-6">{{eligible_students.toLocaleString("en-US")}}
+									</h2>
+									<p class="mb-0 fs-14 fw-500 text-left">Eligible Students</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-xs-2">
+					<div class="card">
+						<div class="card-body p-2">
+							<div class="d-flex align-items-center">
+								<img src="/assets/semis_theme/img/amount.png"
+									class="img-thumbnail object-cover ps-2 bg-light-yellow" width="50" height="50" />
+								<div class="ms-2">
+									<h2 class="text-dark mb-0 mt-1 fs-6">{{stipend_received.toLocaleString("en-US")}}
+									</h2>
+									<p class="mb-0 fs-14 fw-500 text-left">Amount Disbursed</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+			</div>
+
+			<div class="row mt-2">
+
+				<div class="col-md-4">
+					<div class="card">
+						<div class="card-header custom-header">
+							<div>
+								<h3 class="card-title fw-600">Amount Disbursement</h3>
+								<h6 class="card-subtitle fw-500">Class wise</h6>
+							</div>
+
+						</div>
+						<div class="card-body py-0">
+							<div id="classcontainer"></div>
+						</div>
+					</div>
+
+					<div class="card mt-2">
+						<div class="card-header custom-header">
+							<div>
+								<h3 class="card-title fw-600">Amount Disbursement</h3>
+								<h6 class="card-subtitle fw-500">Area wise</h6>
+							</div>
+
+						</div>
+						<div class="card-body py-0">
+							<div id="areacontainer"></div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="col-md-8">
+					<div class="card">
+						<div class="card-body" id="mapContainer" style="height:776px">
+							<!-- <img src="/assets/semis_theme/img/map.png" class="map-img" style="height:736px"> -->
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+
+		</div>
+
+
+	</section>
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-05-30 15:48:46.521047",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "district",
+  "vi",
+  "ix",
+  "x",
+  "attendance_percentage"
+ ],
+ "fields": [
+  {
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "label": "District",
+   "options": "District",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "vi",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "VI",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "ix",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "IX",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "x",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "X",
+   "reqd": 1
+  },
+  {
+   "fieldname": "attendance_percentage",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Min  Attendance (%)",
+   "precision": "1",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-08-23 10:55:33.797980",
+ "modified_by": "Administrator",
+ "module": "GSP",
+ "name": "GSP Factors values",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

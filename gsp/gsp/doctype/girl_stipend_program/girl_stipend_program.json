@@ -1,0 +1,368 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:GSP-{semis_code}-{year}",
+ "creation": "2022-05-30 15:06:16.464690",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "semis_code",
+  "year",
+  "posting_date",
+  "school_name",
+  "location",
+  "school_address",
+  "division",
+  "gsp_district",
+  "u_c",
+  "taluka",
+  "head_name",
+  "head_cell_no",
+  "cnic_head_teacher",
+  "gsp_gender",
+  "eligibility",
+  "enrollment_detail_section",
+  "class_vi",
+  "added_class_vi",
+  "class_ix",
+  "added_class_ix",
+  "class_x",
+  "added_class_x",
+  "total_enrollment",
+  "working_days_section",
+  "read_only_22",
+  "working_days",
+  "october",
+  "november",
+  "total",
+  "section_break_26",
+  "name_deo",
+  "scan_copy_of_form",
+  "section_break_33",
+  "gps_latitude",
+  "gps_longitude",
+  "gps_accuracy",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "columns": 4,
+   "default": "2021-22",
+   "fieldname": "year",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Academic Year",
+   "options": "Year",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "columns": 4,
+   "fieldname": "semis_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "SEMIS Code",
+   "options": "School",
+   "reqd": 1
+  },
+  {
+   "columns": 4,
+   "fieldname": "head_name",
+   "fieldtype": "Data",
+   "label": "Name of Head Teacher"
+  },
+  {
+   "columns": 12,
+   "fetch_from": "semis_code.address",
+   "fetch_if_empty": 1,
+   "fieldname": "school_address",
+   "fieldtype": "Read Only",
+   "label": "School Address",
+   "read_only": 1
+  },
+  {
+   "columns": 12,
+   "fetch_from": "semis_code.school_name",
+   "fetch_if_empty": 1,
+   "fieldname": "school_name",
+   "fieldtype": "Read Only",
+   "label": "School Name",
+   "read_only": 1
+  },
+  {
+   "columns": 4,
+   "fieldname": "head_cell_no",
+   "fieldtype": "Data",
+   "label": "Head Teacher Cell/Phone #",
+   "length": 13
+  },
+  {
+   "columns": 3,
+   "fetch_from": "semis_code.division",
+   "fetch_if_empty": 1,
+   "fieldname": "division",
+   "fieldtype": "Link",
+   "label": "Division",
+   "options": "Division",
+   "read_only": 1
+  },
+  {
+   "columns": 3,
+   "fetch_from": "semis_code.taluka",
+   "fetch_if_empty": 1,
+   "fieldname": "taluka",
+   "fieldtype": "Link",
+   "label": "Taluka/Town",
+   "options": "Taluka",
+   "read_only": 1
+  },
+  {
+   "columns": 3,
+   "fetch_from": "semis_code.union_council",
+   "fetch_if_empty": 1,
+   "fieldname": "u_c",
+   "fieldtype": "Link",
+   "label": "Union Council",
+   "options": "Union Council",
+   "read_only": 1
+  },
+  {
+   "description": "Please fill Girls Enrollment only for(Current Academic Year), in the following column",
+   "fieldname": "enrollment_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Enrollment Detail"
+  },
+  {
+   "columns": 3,
+   "default": "0",
+   "fieldname": "class_vi",
+   "fieldtype": "Int",
+   "label": "Class VI",
+   "length": 3,
+   "reqd": 1
+  },
+  {
+   "columns": 3,
+   "default": "0",
+   "fieldname": "class_ix",
+   "fieldtype": "Int",
+   "label": "Class IX",
+   "length": 3,
+   "reqd": 1
+  },
+  {
+   "columns": 3,
+   "default": "0",
+   "fieldname": "class_x",
+   "fieldtype": "Int",
+   "label": "Class X",
+   "length": 3,
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "columns": 3,
+   "fieldname": "total_enrollment",
+   "fieldtype": "Read Only",
+   "label": "Total Enrollment",
+   "read_only": 1
+  },
+  {
+   "columns": 4,
+   "default": "0",
+   "fieldname": "october",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "October",
+   "length": 2
+  },
+  {
+   "columns": 4,
+   "default": "0",
+   "fieldname": "november",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "November",
+   "length": 2
+  },
+  {
+   "columns": 4,
+   "fieldname": "total",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Total",
+   "read_only": 1
+  },
+  {
+   "columns": 4,
+   "fieldname": "cnic_head_teacher",
+   "fieldtype": "Data",
+   "label": "CNIC number of Head Teacher",
+   "reqd": 1
+  },
+  {
+   "columns": 6,
+   "fieldname": "name_deo",
+   "fieldtype": "Data",
+   "label": "Name of Concerned DEO"
+  },
+  {
+   "allow_on_submit": 1,
+   "columns": 12,
+   "fieldname": "scan_copy_of_form",
+   "fieldtype": "Table",
+   "label": "Upload a Complete Scan Copy of Form",
+   "options": "GSP Scan"
+  },
+  {
+   "fieldname": "section_break_26",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "added_class_vi",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Student added against  Class VI"
+  },
+  {
+   "fieldname": "added_class_ix",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Student added against  Class IX"
+  },
+  {
+   "fieldname": "added_class_x",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Student added against  Class IX"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Girl Stipend Program",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "columns": 3,
+   "fetch_from": "semis_code.district",
+   "fetch_if_empty": 1,
+   "fieldname": "gsp_district",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "District",
+   "options": "District",
+   "read_only": 1
+  },
+  {
+   "columns": 4,
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "semis_code.gender",
+   "fieldname": "gsp_gender",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Gender"
+  },
+  {
+   "fieldname": "eligibility",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Eligible",
+   "options": "\nEligible\nIneligible",
+   "read_only": 1
+  },
+  {
+   "columns": 12,
+   "fieldname": "read_only_22",
+   "fieldtype": "Heading",
+   "label": "No . of days school remained open in Currrent Academic Year"
+  },
+  {
+   "fieldname": "working_days_section",
+   "fieldtype": "Section Break",
+   "label": "Working Days"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "working_days",
+   "fieldtype": "Table",
+   "options": "GSP Monthly Attendance"
+  },
+  {
+   "fetch_from": "semis_code.location",
+   "fieldname": "location",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Location",
+   "options": "\nUrban\nRural",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_33",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "gps_latitude",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "GPS Latitude"
+  },
+  {
+   "fieldname": "gps_longitude",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "GPS Longitude"
+  },
+  {
+   "fieldname": "gps_accuracy",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "GPS Accuracy"
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "is_custom_form": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "GSP Student",
+   "link_fieldname": "school"
+  }
+ ],
+ "modified": "2022-08-25 13:19:39.819022",
+ "modified_by": "Administrator",
+ "module": "GSP",
+ "name": "Girl Stipend Program",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "semis_code",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

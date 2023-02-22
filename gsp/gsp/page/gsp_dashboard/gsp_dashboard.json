@@ -1,0 +1,26 @@
+{
+ "content": null,
+ "creation": "2022-07-27 14:26:33.975893",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2022-08-11 10:47:05.332174",
+ "modified_by": "Administrator",
+ "module": "GSP",
+ "name": "gsp-dashboard",
+ "owner": "Administrator",
+ "page_name": "GSP Dashboard",
+ "roles": [
+  {
+   "role": "SEMIS Manager"
+  },
+  {
+   "role": "GSP Manager"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0,
+ "title": "GSP Dashboard"
+}

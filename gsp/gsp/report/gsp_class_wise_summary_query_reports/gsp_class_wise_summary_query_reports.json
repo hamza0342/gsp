@@ -1,0 +1,83 @@
+{
+ "add_total_row": 1,
+ "columns": [
+  {
+   "fieldname": "class",
+   "fieldtype": "Data",
+   "label": "Class",
+   "width": 140
+  },
+  {
+   "fieldname": "total_student",
+   "fieldtype": "Int",
+   "label": "Total Student",
+   "width": 180
+  },
+  {
+   "fieldname": "eligible_student",
+   "fieldtype": "Int",
+   "label": "Eligible Student",
+   "width": 180
+  },
+  {
+   "fieldname": "ineligible_student",
+   "fieldtype": "Int",
+   "label": "Ineligible Student",
+   "width": 180
+  },
+  {
+   "fieldname": "total_amont",
+   "fieldtype": "Int",
+   "label": "Total Amount",
+   "width": 180
+  }
+ ],
+ "creation": "2022-06-17 15:08:44.329880",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "gsp_year",
+   "fieldtype": "Link",
+   "label": "Year",
+   "mandatory": 1,
+   "options": "Year",
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "gsp_district",
+   "fieldtype": "Link",
+   "label": "District",
+   "mandatory": 0,
+   "options": "District",
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "semis_code",
+   "fieldtype": "Link",
+   "label": "School",
+   "mandatory": 0,
+   "options": "School",
+   "wildcard_filter": 1
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "modified": "2022-06-20 16:54:44.648272",
+ "modified_by": "Administrator",
+ "module": "GSP",
+ "name": "GSP Class Wise Summary Query Reports",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "select class_of_student, \ncase when class_of_student = 'Class VI' then (select sum(class_vi) from `tabGirl Stipend Program` where docstatus!=2 ) \nwhen class_of_student = 'Class IX' then (select sum(class_ix) from `tabGirl Stipend Program` where docstatus!=2 ) \nwhen class_of_student = 'Class X' then (select sum(class_x) \nfrom `tabGirl Stipend Program` \nwhere docstatus!=2 ) else 0 end as total, \nsum(case when eligibility_criteria = 'Eligible' then 1 else 0 end) as Eligible, \nsum(case when eligibility_criteria = 'Not Eligible' then 1 else 0 end) as aaa, \nsum(stipend_received) as Amount \nfrom `tabGSP Student` \nwhere docstatus!=2  %(filters)s  group by class_of_student order by class_of_student",
+ "ref_doctype": "Girl Stipend Program",
+ "report_name": "GSP Class Wise Summary Query Reports",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ]
+}

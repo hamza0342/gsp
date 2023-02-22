@@ -1,0 +1,164 @@
+{
+ "charts": [],
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">GSP Quick Links</span>\",\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"GSP Assigned Schools\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"GSP Roster\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\" GSP Configuration Panel\",\"col\":4}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Girls Stipend Form List\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Add New Girls Stipend Form\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"GSP Student List\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Add New GSP Student\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"GSP Student Attendance Tool\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"GSP Dashboard\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"GSP Performance Dashboard\",\"col\":3}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"paragraph\",\"data\":{\"text\":\"GSP Report Links\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"GSP Reports\",\"col\":4}}]",
+ "creation": "2022-09-23 15:28:23.751331",
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "idx": 0,
+ "label": "GSP Module",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "GSP Reports",
+   "link_count": 6,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "GSP School List",
+   "link_count": 0,
+   "link_to": "GSP School List",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "GSP District Wise Summary ",
+   "link_count": 0,
+   "link_to": "GSP District Wise Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "GSP Student Line List Report",
+   "link_count": 0,
+   "link_to": "GSP Student Line List",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Download GSP Student List",
+   "link_count": 0,
+   "link_to": "Download GSP Student List",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "GSP Class Wise Summary",
+   "link_count": 0,
+   "link_to": "GSP Class Wise Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Cash Disbursement Line List",
+   "link_count": 0,
+   "link_to": "Cash Disbursement Line List",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2022-09-27 16:00:28.657706",
+ "modified_by": "Administrator",
+ "module": "GSP",
+ "name": "GSP Module",
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 3.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "GSP Assigned Schools",
+   "link_to": "GSP Assigned Schools",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "GSP Roster",
+   "link_to": "GSP Roster",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": " GSP Configuration Panel",
+   "link_to": "GSP Panel",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Girls Stipend Form List",
+   "link_to": "Girl Stipend Program",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "Add New Girls Stipend Form",
+   "link_to": "Girl Stipend Program",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "GSP Student List",
+   "link_to": "GSP Student",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "Add New GSP Student",
+   "link_to": "GSP Student",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "GSP Student Attendance Tool",
+   "link_to": "GSP Student Attendance Tools",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "GSP Dashboard",
+   "link_to": "gsp-dashboard",
+   "type": "Page"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "GSP Performance Dashboard",
+   "link_to": "GSP Performance Dashboard",
+   "type": "DocType"
+  }
+ ],
+ "title": "GSP Module"
+}

@@ -1,0 +1,58 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-06-02 15:36:19.524769",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "scan_copy",
+  "image_key",
+  "uploaded"
+ ],
+ "fields": [
+  {
+   "allow_on_submit": 1,
+   "fieldname": "scan_copy",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "Scan Copy of Form"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "image_key",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Image Key"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "uploaded",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Uploaded",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-08-28 16:49:26.619962",
+ "modified_by": "Administrator",
+ "module": "GSP",
+ "name": "GSP Scan",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

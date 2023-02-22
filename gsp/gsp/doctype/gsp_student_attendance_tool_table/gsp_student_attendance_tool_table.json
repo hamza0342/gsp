@@ -1,0 +1,63 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-08-03 11:17:08.936929",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "gr_no",
+  "student_name",
+  "father_name",
+  "attendance",
+  "gsp_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "gr_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "GR No.",
+   "read_only": 1
+  },
+  {
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Student Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "attendance",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Attendance"
+  },
+  {
+   "fieldname": "father_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Father Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "gsp_name",
+   "fieldtype": "Link",
+   "label": "GSP Name",
+   "options": "GSP Student",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-08-25 16:05:51.317341",
+ "modified_by": "Administrator",
+ "module": "GSP",
+ "name": "GSP Student Attendance Tool Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
